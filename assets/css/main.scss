@@ -377,6 +377,24 @@ html, body {
   }
 }
 
+@media (min-width: 1440px) {
+  .with-gutter {
+    padding: 0 calc(calc(90% - 1104px) / 2);
+  }
+  .with-gutter-margin {
+    margin: 0 calc(calc(90% - 1104px) / 2);
+  }
+}
+
+@media (min-width: 2560px) {
+  .with-gutter {
+    padding: 0 calc(calc(100% - 1600px) / 2);
+  }
+  .with-gutter-margin {
+    margin: 0 calc(calc(100% - 1600px) / 2);
+  }
+}
+
 @keyframes slideImages {
   0% {
     transform: translateX(0);
