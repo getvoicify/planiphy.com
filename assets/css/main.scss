@@ -182,24 +182,17 @@ html, body {
     gap: 16px;
 
     .beta-banner-text {
-        padding: 10px;
+        padding: 3px 10px;
         background: #FFC700;
         border-radius: 10px;
         color: black;
-        font-size: 14px;
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 12px;
         font-weight: 800;
-        line-height: 22.86px;
-        word-wrap: break-word;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .beta-banner-description {
         color: rgba(27, 31, 59, 0.80);
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 600;
         line-height: 22.86px;
         word-wrap: break-word;
