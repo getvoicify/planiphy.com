@@ -9,6 +9,7 @@ html, body {
   body {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
   }
 
   main {
@@ -70,29 +71,40 @@ html, body {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 1rem 0px;
+    padding: 16px 0px;
     margin-bottom: 24px;
+
+    .brand-logo {
+      width: 100%;
+      height: 100%;
+    }
 
     @media (min-width: 769px) {
         margin-bottom: 40px;
       }
   
-    .logo {
-      // Logo styles
-    }
+      .logo {
+        // Set default height for smaller screens
+        height: 40px;
+    
+        // Adjust height for larger screens
+        @media (min-width: 1024px) {
+          height: 52px;
+        }
+      }
   
     .nav-list {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 24px;
       margin: 0;
       padding: 0;
       justify-content: center;
       flex-grow: 1;
   
       li a {
-        font-size: 20px; // Set the font size to 16px
-        font-weight: 600; // 600 is typically semi-bold
+        font-size: 18px; // Set the font size to 16px
+        font-weight: 400; // 600 is typically semi-bold
         text-decoration: none;
         color: #526ED3;
       }
@@ -127,7 +139,7 @@ html, body {
       // styles for mobile menu toggle
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .main-navigation {
       padding: 1rem 0px;
   
@@ -141,35 +153,7 @@ html, body {
     }
     
   }
-  
-  // Media queries
-  
-
-  // @media (min-width: 577px) and (max-width: 992px) {
-  //   body {
-  //     padding: 0 24px;
-  //   }
-
-  //   .main-navigation {
-  //       padding: 1rem 0px;
-    
-  //       .nav-list {
-  //         display: none;
-  //       }
-    
-  //       .menu-toggle {
-  //         display: block;
-  //       }
-  //     }
-    
-  // }
-
-  // @media (min-width: 993px) and (max-width: 1200px) {
-  //   body {
-  //     padding: 0 40px;
-  //   }
-    
-  // }
+ 
   
   .beta-banner {
     padding: 8px;
