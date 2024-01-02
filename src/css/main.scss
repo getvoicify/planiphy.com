@@ -1,97 +1,133 @@
 html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Manrope', sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+section#hero {
+  padding-top: 1.5rem;
+  display: flex;
+  gap: 4rem;
+  width: calc(100% - 0rem);
+  margin: 0 auto;
+
+
+  .desc {
+    min-width: 30%;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
+}
+
+
+h1#typewriter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #000;
+  margin: 0;
+  font-weight: 800;
+  user-select: none;
+  font-size: 40px;
+  line-height: 3rem;
+  height: 170px;
+  padding-top: 2rem;
+
+  span {
+    color: #526ED3;
   }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 4rem;
+    height: 180px;
   }
 
-  section#hero {
+  @media (min-width: 1024px) {
+    font-size: 72px;
+    line-height: 5.5rem;
+    height: auto;
     padding-top: 1.5rem;
-    display: flex;
-    gap: 4rem;
-    width: calc(100% - 0rem);
-    margin: 0 auto;
+  }
+}
 
 
-    .desc {
-      min-width: 30%;
-    }
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  margin-bottom: 24px;
 
+  .brand-logo {
+    width: 100%;
+    height: 100%;
   }
 
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
 
-  h1#typewriter {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: #000;
-    margin: 0;
-    font-weight: 800;
-    user-select: none;
-    font-size: 40px;
-    line-height: 3rem;
-    height: 170px;
-    padding-top: 2rem;
+  .logo {
+    // Set default height for smaller screens
+    height: 40px;
 
-    span {
-      color: #526ED3;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 48px;
-      line-height: 4rem;
-      height: 180px;
-    }
-
+    // Adjust height for larger screens
     @media (min-width: 1024px) {
-      font-size: 72px;
-      line-height: 5.5rem;
-      height: auto;
-      padding-top: 1.5rem;
+      height: 52px;
     }
   }
 
+  .nav-list {
+    display: none;
+  }
 
-  .main-navigation {
+  .get-started-btn {
+    width: auto;
+    padding: .625rem 1.5rem;
+    background-color: #526ED3; // Deep blue background
+    color: white; // White text
+    font-size: 16px;
+    font-weight: 800; // Bold text
+    line-height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none; // Remove underline from link
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    padding: 16px 0;
-    margin-bottom: 24px;
 
-    .brand-logo {
-      width: 100%;
-      height: 100%;
+    &:hover {
+      background-color: darken(#526ED3, 10%);
     }
 
-    @media (min-width: 769px) {
-        margin-bottom: 40px;
-      }
+    &:active {
+      background-color: lighten(#526ED3, 10%);
+    }
+  }
 
-      .logo {
-        // Set default height for smaller screens
-        height: 40px;
+  .menu-toggle {
+    display: block;
+  }
+}
 
-        // Adjust height for larger screens
-        @media (min-width: 1024px) {
-          height: 52px;
-        }
-      }
+@media (min-width: 768px) {
+  .main-navigation {
 
     .nav-list {
       list-style: none;
@@ -110,77 +146,40 @@ html, body {
       }
     }
 
-    .get-started-btn {
-        width: auto;
-        padding: .625rem 1.5rem;
-        background-color: #526ED3; // Deep blue background
-        color: white; // White text
-        font-size: 16px;
-        font-weight: 800; // Bold text
-        line-height: 24px;
-        border-radius: 12px;
-        text-align: center;
-        text-decoration: none; // Remove underline from link
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:hover {
-          background-color: darken(#526ED3, 10%);
-        }
-
-        &:active {
-          background-color: lighten(#526ED3, 10%);
-        }
-    }
-
     .menu-toggle {
       display: none;
-      // styles for mobile menu toggle
     }
   }
-  @media (max-width: 768px) {
-    .main-navigation {
-      padding: 1rem 0px;
 
-      .nav-list {
-        display: none;
-      }
+}
 
-      .menu-toggle {
-        display: block;
-      }
-    }
 
+.beta-banner {
+  padding: 8px;
+  background: rgba(255, 199, 0, 0.12);
+  border-radius: 16px;
+  border: 1px solid #FFC700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  .beta-banner-text {
+    padding: 3px 10px;
+    background: #FFC700;
+    border-radius: 10px;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
   }
 
-
-  .beta-banner {
-    padding: 8px;
-    background: rgba(255, 199, 0, 0.12);
-    border-radius: 16px;
-    border: 1px solid #FFC700;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-
-    .beta-banner-text {
-        padding: 3px 10px;
-        background: #FFC700;
-        border-radius: 10px;
-        color: black;
-        font-size: 12px;
-        font-weight: 800;
-    }
-
-    .beta-banner-description {
-        color: rgba(27, 31, 59, 0.80);
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 22.86px;
-        word-wrap: break-word;
-    }
+  .beta-banner-description {
+    color: rgba(27, 31, 59, 0.80);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22.86px;
+    word-wrap: break-word;
+  }
 }
 
 .typewriter-container {
@@ -245,7 +244,7 @@ html, body {
   }
 
   .right-section {
-    padding-top: 0px;
+    padding-top: 0;
 
     @media (min-width: 770px) {
       flex: 0 0 auto; // This prevents the section from growing
@@ -327,10 +326,10 @@ html, body {
   }
 
   &:hover {
-      .responsive-image {
-        filter: none; // Remove blur on hover
-      }
+    .responsive-image {
+      filter: none; // Remove blur on hover
     }
+  }
 }
 
 // utilities
@@ -352,7 +351,7 @@ html, body {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   .with-gutter {
     padding: 0 80px;
   }
