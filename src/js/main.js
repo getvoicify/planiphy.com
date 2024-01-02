@@ -1,4 +1,5 @@
 import '../css/main.scss';
+import { initGrowthbook, addListener } from './growthbook';
 let currPhraseInx = 0;
 const phrases = [
     "Organize Your Time.",
@@ -38,5 +39,15 @@ async function run() {
     }
 
 }
+
+initGrowthbook().then(() => {
+    addListener('show-menu', (isOn) => {
+        if (isOn) {
+            document.getElementById('menu').classList.remove('hidden');
+        } else {
+            document.getElementById('menu').classList.add('hidden');
+        }
+    })
+}).catch(console.error);
 
 run().catch(console.error);

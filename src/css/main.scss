@@ -341,6 +341,10 @@ h1#typewriter {
   padding: 0 16px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media (min-width: 768px) {
   .with-gutter {
     padding: 0 40px;
