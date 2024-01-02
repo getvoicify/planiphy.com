@@ -5,7 +5,7 @@ html, body {
     overflow: hidden;
     font-family: 'Manrope', sans-serif;
   }
-  
+
   body {
     display: flex;
     flex-direction: column;
@@ -18,60 +18,60 @@ html, body {
     justify-content: space-between;
     flex: 1;
   }
-  
+
   section#hero {
     padding-top: 1.5rem;
     display: flex;
     gap: 4rem;
     width: calc(100% - 0rem);
     margin: 0 auto;
-    
-  
+
+
     .desc {
       min-width: 30%;
     }
 
   }
 
-  
+
   h1#typewriter {
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     color: #000;
-    font-size: 72px;
-    line-height: 5.5rem;
     margin: 0;
     font-weight: 800;
-    padding-top: 24px;
-  
+    user-select: none;
+    font-size: 40px;
+    line-height: 3rem;
+    height: 170px;
+    padding-top: 2rem;
+
     span {
       color: #526ED3;
     }
 
-    @media (max-width: 1133px) {// Mobile phone and tablets
-        font-size: 40px;
-        line-height: 3rem;
-        height: 170px;
-        padding-top: 32px;
-      }
+    @media (min-width: 768px) {
+      font-size: 48px;
+      line-height: 4rem;
+      height: 180px;
+    }
 
-    @media (min-width: 768px) and (max-width: 991px) {//Tablet
-    font-size: 48px;
-    line-height: 4rem;
-    height: 180px;
-    padding-top: 32px;
+    @media (min-width: 1024px) {
+      font-size: 72px;
+      line-height: 5.5rem;
+      height: auto;
+      padding-top: 1.5rem;
     }
   }
-  
-  
+
+
   .main-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 16px 0px;
+    padding: 16px 0;
     margin-bottom: 24px;
 
     .brand-logo {
@@ -82,17 +82,17 @@ html, body {
     @media (min-width: 769px) {
         margin-bottom: 40px;
       }
-  
+
       .logo {
         // Set default height for smaller screens
         height: 40px;
-    
+
         // Adjust height for larger screens
         @media (min-width: 1024px) {
           height: 52px;
         }
       }
-  
+
     .nav-list {
       list-style: none;
       display: flex;
@@ -101,7 +101,7 @@ html, body {
       padding: 0;
       justify-content: center;
       flex-grow: 1;
-  
+
       li a {
         font-size: 18px; // Set the font size to 16px
         font-weight: 400; // 600 is typically semi-bold
@@ -109,7 +109,7 @@ html, body {
         color: #526ED3;
       }
     }
-  
+
     .get-started-btn {
         width: auto;
         padding: .625rem 1.5rem;
@@ -124,16 +124,16 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         &:hover {
           background-color: darken(#526ED3, 10%);
         }
-    
+
         &:active {
           background-color: lighten(#526ED3, 10%);
         }
     }
-  
+
     .menu-toggle {
       display: none;
       // styles for mobile menu toggle
@@ -142,19 +142,19 @@ html, body {
   @media (max-width: 768px) {
     .main-navigation {
       padding: 1rem 0px;
-  
+
       .nav-list {
         display: none;
       }
-  
+
       .menu-toggle {
         display: block;
       }
     }
-    
+
   }
- 
-  
+
+
   .beta-banner {
     padding: 8px;
     background: rgba(255, 199, 0, 0.12);
@@ -308,7 +308,7 @@ html, body {
   bottom: 0;
   left: 0;
   width: calc(200% + 20px); // Adjusted to include the spacing
-  height: 30vh; 
+  height: 30vh;
   display: flex;
   align-items: flex-start;
   animation: slideImages 60s linear infinite; // Adjust time as needed
@@ -319,7 +319,7 @@ html, body {
     object-fit: cover;
     filter: blur(5px);
     transition: filter 0.5s ease; // Smooth transition for the filter
-    
+
 
     &:not(:last-child) {
       margin-right: 20px; // Spacing between the images
