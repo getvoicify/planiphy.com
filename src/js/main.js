@@ -1,4 +1,4 @@
-const totalAnimSpeed = 60000; // 6secs
+import '../css/main.scss';
 let currPhraseInx = 0;
 const phrases = [
     "Organize Your Time.",
@@ -40,4 +40,3 @@ async function run() {
 }
 
 run().catch(console.error);
-

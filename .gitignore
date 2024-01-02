@@ -1,3 +1,6 @@
 .history
 .vscode
-/assets/css/*.css
+.DS_Store
+.idea
+dist
+node_modules/
