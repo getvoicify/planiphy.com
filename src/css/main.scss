@@ -40,7 +40,6 @@ h1#typewriter {
   color: #000;
   margin: 0;
   font-weight: 800;
-  user-select: none;
   font-size: 40px;
   line-height: 3rem;
   height: 170px;
@@ -99,8 +98,8 @@ h1#typewriter {
   .get-started-btn {
     width: auto;
     padding: .625rem 1.5rem;
-    background-color: #526ED3; // Deep blue background
-    color: white; // White text
+    background-color: #f5f6f7; // Deep blue background
+    color: #526ED3; // White text
     font-size: 16px;
     font-weight: 800; // Bold text
     line-height: 24px;
@@ -110,13 +109,16 @@ h1#typewriter {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #526ED3;
+    transition: background-color 0.3s ease 0.2s, box-shadow 0.3s ease 0.2s;
 
     &:hover {
-      background-color: darken(#526ED3, 10%);
+      background-color: darken(#fdfefe, 5%);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
     &:active {
-      background-color: lighten(#526ED3, 10%);
+      background-color: lighten(#f1f1f1, 10%);
     }
   }
 
@@ -268,29 +270,30 @@ h1#typewriter {
     }
 
     .cta-button {
-      display: flex;
-      justify-content: flex-start;
+      padding: 16px 32px;
+      background-color: #526ED3; // Deep blue background
+      color: white; // White text
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 800; // Bold text
+      line-height: 24px;
+      border-radius: 12px;
+      text-align: center;
+      display: inline-flex; // Changed to inline-flex
+      justify-content: center;
       align-items: center;
-      width: 100%; // Full width on mobile
-      padding: 0; // Reset padding
+      width: auto; // Width set to auto
+      transition: background-color 0.3s ease 0.2s, box-shadow 0.3s ease 0.2s;
 
-      @media (min-width: 770px) {
-        width: 258px; // Specific width for larger screens
+      &:hover {
+        background-color: darken(#526ED3, 10%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       }
 
-      .cta-text {
-        background: #526ED3;
-        border-radius: 12px;
-        color: white;
-        font-size: 15px;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 600;
-        line-height: 24px;
-        word-wrap: break-word;
-        text-align: center;
-        padding: 16px 24px; // Padding to maintain button height
-        width: auto;
+      &:active {
+        background-color: lighten(#526ED3, 10%);
       }
+      
     }
   }
 }
