@@ -3,7 +3,7 @@ import { GrowthBook } from "@growthbook/growthbook";
 const growthbook = new GrowthBook({
     apiHost: "https://proxy.growthbook.planiphy.com",
     clientKey: import.meta.env.VITE_GB_KEY,
-    enableDevMode: true,
+    enableDevMode: import.meta.env.VITE_DEV_MODE === "true",
     trackingCallback: (experiment, result) => {
         // TODO: Use your real analytics tracking system
         console.log("Viewed Experiment", {
@@ -24,4 +24,7 @@ export async function initGrowthbook() {
 
 export const addListener = (feature, cb) => {
     cb(growthbook.isOn(feature));
+    growthbook.setRenderer(() => {
+        cb(growthbook.isOn(feature));
+    });
 }
