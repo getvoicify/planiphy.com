@@ -6,7 +6,7 @@
   },
   "devDependencies": {
     "sass": "^1.69.6",
-    "vite": "^2.9.16"
+    "vite": "^2.9.17"
   },
   "dependencies": {
     "@growthbook/growthbook": "^0.31.0"
